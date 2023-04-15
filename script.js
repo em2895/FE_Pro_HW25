@@ -9,34 +9,34 @@ const resThink = document.getElementById("resThink");
 const shock = document.getElementById("shock");
 const resShock = document.getElementById("resShock");
 
+function counter() {
+    let count = 0;
+    return function() {
+        return ++count;
+    };
+}
 
-
-let counter1 = 0;
+const counter1 = counter();
 bigFingerUp.addEventListener('click', () => {
-    counter1++;
-    resBigFingerUp.innerText = counter1;
+   resBigFingerUp.innerText = counter1();
 })
 
-let counter2 = 0;
+const counter2 = counter();
 sunglasses.addEventListener('click', () => {
-    counter2++;
-    resSunglasses.innerText = counter2;
+    resSunglasses.innerText =  counter2();
 })
 
-let counter3 = 0;
+const counter3 = counter();
 love.addEventListener('click', () => {
-    counter3++;
-    resLove.innerText = counter3;
+    resLove.innerText = counter3();
 })
 
-let counter4 = 0;
+const counter4 = counter();
 think.addEventListener('click', () => {
-    counter4++;
-    resThink.innerText = counter4;
+    resThink.innerText = counter4();
 })
 
-let counter5 = 0;
+const counter5 = counter();
 shock.addEventListener('click', () => {
-    counter5++;
-    resShock.innerText = counter5;
+    resShock.innerText = counter5();
 })
